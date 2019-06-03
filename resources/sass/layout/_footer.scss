@@ -1,0 +1,22 @@
+.footer {
+    background: $most-popular-bg;
+    .wrapper {
+        border-top: 1px solid #3d3e40;;
+        padding-top: 2.8vw;
+        padding-bottom: 2.8vw;
+        .header-logo {
+            margin: 0;
+            a {
+                font-size: 1.6vmax;;
+            }
+        }
+        .footer-navigation {
+            @extend .bottom-header__navigation;
+            align-self: center;
+        }
+        .header-socials {
+            justify-self: right;
+        }
+    }
+}
+

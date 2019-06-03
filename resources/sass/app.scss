@@ -1,0 +1,56 @@
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/placeholders";
+// Vendor imports
+// End
+@import "base/reset";
+@import "base/fonts";
+@import "base/typography";
+@import 'layout/navigation';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'layout/forms';
+@import 'layout/main';
+@import "layout/subscribe";
+@import 'components/buttons';
+@import 'components/carousel';
+@import 'components/cover';
+@import 'components/tags';
+@import 'components/cards';
+// Page imports
+@import "pages/register";
+@import "pages/login";
+@import "pages/index";
+// End page imports
+
+// Theme imports
+
+// End
+
+
+/* INDEX */
+/* TODO переделать лупу в btn */
+/* TODO js для карусели */
+/* End Index */
+
+/* Article */
+/* TODO боковую карточку в теле статьи <aside> ведущую на статью с похожей тематикой */
+/* TODO добавление быстрого ответа на комментарий, аналог вк */
+/* TODO Написать js для карусели + скрытие карточки у карусели и открытие ее при повторном слайде +
+TODO прятать ее изначально, если не 1 элемент и показывать после того как слайд заедет */
+/* End Article */
+
+
+/* All */
+/* TODO Добавить эффект нажатия на кнопки в виде еще сильнее затемнения */
+/* TODO стрелочка прокрутки + Js Для нее */
+/* TODO Добавить в index.html для тега main min-height: calc(100vh - шапка vw - footer vw) */
+/* End All */
+
+/* TODO Как закончу вёрстку:
+   TODO Создать в pages->article
+   TODO Перенести все стили отдельно из main в element_name(сделав тем самым модульную систему)
+   TODO Подключить нужное в pages->article */

@@ -1,0 +1,261 @@
+.author-card {
+    @include size(16.66vw, 26vw);
+    margin-top: .8vw;
+    margin-right: 0;
+    margin-left: auto;
+    border: 1px solid $add-comment;
+    border-radius: .25vw;
+    .author-card-header {
+        height: 18.33vw;
+        .author-card-figure {
+            padding-top: 2.25vw;
+            &__img {
+                position: relative;
+                left: 25%;
+                @include size(8.33vw, 8.33vw);
+                object-fit: cover;
+                border-radius: 50%;
+            }
+            &-info {
+                margin-top: 1.5vw;
+                text-align: center;
+                .figure-info__name {
+                    text-transform: uppercase;
+                    font-family: $alt-font-family-bold;
+                    font-size: .91vmax;
+                    line-height: 1.2;
+                    letter-spacing: 0.2em;
+                    color: $card-user-name-text;
+                }
+                .figure-info__position {
+                    margin-top: .83vw;
+                    color: $card-user-position-text;
+                    font-size: 1vmax;
+                    font-family: $base-font-family;
+                    line-height: 1.3;
+                    margin-bottom: 2.83vw;
+                }
+            }
+        }
+    }
+
+    .author-card-buttons {
+        @include flex;
+        height: 3.33vw;
+        .author-card__button {
+            @include anime();
+            cursor: pointer;
+            width: 5.56vw;
+            padding-top: 1.08vw;
+            padding-bottom: 1.08vw;
+            background: $base-white;
+            border-top: 1px solid $add-comment;
+            border-bottom: 1px solid $add-comment;
+            text-align: center;
+            vertical-align: middle;
+            font-size: .9vw;
+            color: $card-user-position-text;
+            &:hover {
+                @include anime();
+                background: $card-user-position-text;
+                color: $card-user-name-text;
+            }
+            &:nth-child(2) {
+                border-right: 1px solid $add-comment;
+                border-left: 1px solid $add-comment;
+            }
+        }
+    }
+    .author-card-footer {
+        height: 4.34vw;
+        .author-card-footer__button {
+            display: block;
+            @include anime();
+            @include size(100%, 100%);
+            text-transform: uppercase;
+            cursor: pointer;
+            background: $base-white;
+            font-family: $alt-font-family-bold;
+            font-size: $small-font-size;
+            line-height: 4;
+            text-align: center;
+            text-decoration: none;
+            color: $card-user-position-text;
+            &:hover {
+                @include anime();
+                color: $card-user-name-text;
+                background: $card-user-position-text;
+            }
+        }
+    }
+}
+
+.carousel-card {
+    padding: 2.33vw 0 2.33vw 0;
+    background: $base-white;
+    border-radius: .25vw;
+    box-shadow: 0px 0px 15px rgba(34, 35, 37, 0.3);
+    &__closebtn {
+        position: absolute;
+        left: 90%;
+        top: 2%;
+        @-moz-document url-prefix() {
+            left: 87.5%;
+            top: 1.5%;
+        }
+    }
+    &-header, &-body {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+        text-align: left;
+        width: 12.66vw;
+    }
+    &-header {
+        margin-top: 1vw;
+        font-family: $alt-font-family-italic;
+        font-size: 1.33vmax;
+        color: #6c6c70;
+        line-height: 1.3;
+        font-style: italic;
+    }
+    &-body {
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        font-family: $alt-font-family;
+        font-size: 1vmax;
+        color: #838d8f;
+        line-height: 1.2;
+    }
+}
+
+.most-popular-card {
+    -webkit-backface-visibility: hidden;
+    height: 25vw;
+    color: $text-black;
+    background: $base-white;
+    .card-body__header {
+        font-family: $alt-font-family-bold;
+    }
+    p {
+        color: $socials;
+    }
+}
+
+.most-popular-card_small_isfront {
+    width: 19vw;
+    border-radius: .6vw .6vw .4vw .4vw;
+    @extend .most-popular-card;
+    @extend %most-popular-card-front;
+    .card-body__text {
+        font-size: 1.16vmax;
+        margin-right: 1.6vw;
+    }
+}
+
+.most-popular-card_small_isback {
+    width: 19vw;
+    @extend .most-popular-card;
+    @extend %most-popular-card-back;
+    .card-back__header {
+        color: $base-white;
+    }
+    a {
+        margin: 1.66vw auto 0;
+    }
+
+    &.bg-nature {
+        background: $most-popular-nature;
+        p {
+            color: $most-popular-nature-p;
+        }
+    }
+    &.bg-explorers {
+        background: $explorer-tag;
+        p {
+            color: $explorer-p;
+        }
+    }
+    &.bg-advices {
+        background: $advices-tag;
+        p {
+            color: $advices-p;
+        }
+    }
+    &.bg-science {
+        background: $science-tag;
+        p {
+            color: $science-p;
+        }
+    }
+    &.bg-travel {
+        background: $travel-tag;
+        p {
+            color: $travel-p;
+        }
+    }
+}
+
+.most-popular-card_small_isfront, .most-popular-card_small_isback {
+    cursor: pointer;
+    overflow: hidden;
+    @include anime();
+    &:hover {
+        overflow: hidden;
+        transform: scale(1.05);
+        @include anime();
+    }
+}
+
+.most-popular-card_big_isfront {
+    @extend .most-popular-card;
+    width: 40vw;
+    border-radius: .4vw .4vw .4vw .4vw;
+    .card-tag {
+        margin-top: 1.5vw;
+        margin-bottom: 1.5vw;
+        margin-left: 0;
+    }
+    .big-card-body-img {
+        position: relative;
+        right: 1vw;
+        top: .5vw;
+        img {
+            height: 23vw;
+            width: 15vw;
+            float: right;
+            @include clearfix;
+        }
+    }
+    .most-popular-card-body {
+        margin-left: 2.5vw;
+    }
+    .card-body__header {
+        width: 21vw;
+    }
+    .card-body__text {
+        width: 19vw;
+        margin-top: 1.3vw;
+        font-size: 1.16vmax;
+    }
+    .card-watch-photo__btn {
+        display: inline-block;
+        margin-top: 3.5vw;
+        margin-bottom: 1.5vw;
+        .far {
+            margin-right: 1vw;
+            margin-left: 1.5vw;
+        }
+        span {
+            position: relative;
+            bottom: .3vw;
+        }
+    }
+    @include anime();
+    &:hover {
+        overflow: hidden;
+        transform: scale(1.05);
+        @include anime();
+    }
+
+}

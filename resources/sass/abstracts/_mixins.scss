@@ -1,0 +1,67 @@
+@import "variables";
+
+/// Управление отзывчивостью.
+/// @access public
+/// @param {String} $breakpoint - точка остановки
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+
+    @if $raw-query {
+        $query: if(
+                type-of($raw-query) == 'string',
+                unquote($raw-query),
+                inspect($raw-query)
+        );
+
+        @media #{$query} {
+            @content;
+        }
+    } @else {
+        @error 'Не указано значение для `#{$breakpoint}`. '
+       + 'Пожалуйста, убедитесь, что точка остановки объявлена в карте `$breakpoints`.';
+    }
+}
+
+/// Помощник для сброса внутреннего обтекания
+/// @author Николас Галлагер
+/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+/// Помощник для определения размера
+/// @author Hugo Giraudel
+/// @param {Length} $width
+/// @param {Length} $height
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+/// Помощник для добавления flex
+@mixin flex {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+/// Помощник для добавления анимаций
+@mixin anime {
+    -moz-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear
+}
+
+/// Подсветка букв в стиле неона
+@mixin neonHighlight {
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #222325, 0 0 20px #222325;
+}

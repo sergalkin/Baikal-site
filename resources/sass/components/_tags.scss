@@ -1,0 +1,60 @@
+.article-header__tag {
+    @extend %tag;
+    color: $base-white;
+    border: 1px solid;
+    letter-spacing: 0.1em;
+    font-family: $alt-font-family-bold;
+    font-size: $tiny-font-size;
+}
+
+.grid__tag {
+    padding: .25vw;
+    border-radius: .25vw;
+    font-size: $tiny-font-size;
+    font-family: $base-font-family-bold;
+    line-height: 1.2;
+    color: $socials;
+    letter-spacing: .1em;
+    border: 1px solid $mpopular-btn-stroke;
+    margin-right: 1vw;
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.card-tag {
+    font-size: $tiny-font-size;
+    font-family: $alt-font-family-bold;
+    color: $base-white;
+    text-transform: uppercase;
+}
+
+.card-front__tag_theme_isnature {
+    @extend %tag;
+    background: $most-popular-nature;
+    color: $base-white;
+}
+
+.card-front__tag_theme_isadvices {
+    @extend %tag;
+    background: $advices-tag;
+    color: $base-white;
+}
+
+.card-front__tag_theme_isexplorers {
+    @extend %tag;
+    background: $explorer-tag;
+    color: $base-white;
+}
+
+.card-front__tag_theme_isscience {
+    @extend %tag;
+    background: $science-tag;
+    color: $base-white;
+}
+
+.card-front__tag_theme_istravel {
+    @extend %tag;
+    background: $travel-tag;
+    color: $base-white;
+}

@@ -1,0 +1,123 @@
+%divider {
+    position: absolute;
+    height: 5.95vw;
+    border-left: 1px solid #3e3f40;
+}
+
+%btn {
+    @include anime();
+    border-radius: 1.5vw;
+    background: none;
+    cursor: pointer;
+    padding: .83vw 1.66vw .91vw 1.66vw;
+    line-height: 1vmax;
+    letter-spacing: 0.2em;
+    text-align: center;
+    vertical-align: middle;
+    outline: 0;
+    &::-moz-focus-inner {
+        border: 0;
+    }
+}
+
+%article-bottom-socials {
+    align-self: center;
+    line-height: 1.2;
+    i {
+        vertical-align: middle;
+        margin-right: 0.66vw;
+    }
+    span {
+        vertical-align: middle;
+    }
+}
+
+%most-popular-card-front {
+    position: relative;
+    text-align: left;
+    .front-header {
+        height: 14vw;
+        .front-header__img {
+            border-top-left-radius: 0.4vw;
+            border-top-right-radius: 0.4vw;
+            width: 100%;
+            height: 100%;
+        }
+        .card-tag-front {
+            position: absolute;
+            top: 1.6vw;
+        }
+    }
+    .most-popular-card-body {
+        margin-left: 1.6vw;
+        .card-body__text {
+            margin-top: 1.16vw;
+        }
+        .card-body__header {
+            margin-top: 1.5vw;
+        }
+    }
+}
+
+%most-popular-card-back {
+    text-align: center;
+    border-radius: .4vw;
+    .card-tag-back {
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    .card-back__header {
+        padding-left: 1.25vw;
+        padding-right: 1.25vw;
+    }
+    p {
+        margin-top: 1vw;
+        padding-left: 3.33vw;
+        padding-right: 3.33vw;
+        font-size: 1.1vmax;
+        line-height: 1.3;
+    }
+    a {
+        display: inline-block;
+    }
+}
+
+%tag {
+    text-transform: uppercase;
+    display: block;
+    @include size(6.8vw, 1.5vw);
+    margin-left: 1.8vw;
+    text-align: center;
+    border-radius: 0.25vw;
+    @-moz-document url-prefix() {
+        line-height: 1.5vw;
+    }
+    line-height: 1.6vw;
+}
+
+%img-hover-layout {
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    @include size(4vw, 4vw);
+    img {
+        @include size(4vw, 4vw);
+        object-fit: cover;
+        position: relative;
+    }
+    @include clearfix;
+    &:before {
+        content: '';
+        position: absolute;
+        @include size(4vw, 4vw);
+        opacity: 0;
+        border-radius: 50%;
+        @include anime;
+        z-index: 2;
+    }
+    &:hover:before {
+        opacity: 0.8;
+        @include anime();
+    }
+}

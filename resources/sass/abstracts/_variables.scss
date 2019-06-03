@@ -1,0 +1,135 @@
+/// @access public
+/// @prop {string} $breakpoints - Варианты точек остановки
+$breakpoints: (
+    'small': (min-width: 800px),
+    'medium': (min-width: 800px),
+    'large': (min-width: 1000px),
+    'huge': (min-width: 1200px),
+    'hug': (max-width: 1201px),
+);
+
+// Colors
+
+$header-bg: #222325;
+$header-magazine: #b8c6c7;
+$header-divider: #3e3f40;
+$header-advert-h: #838c8e;
+$socials: #838d8f;
+$socials-stroke: #393a3b;
+$header-input-placeholder: #888888;
+
+$aside-text: #818181;
+$aside-text-hover: #f1f1f1;
+
+$headline-shares: #cfdfe2;
+
+$likes-btn-text: #666666;
+$heart-color: #ea3838;
+
+$card-user-name-text: #212121;
+$card-user-position-text: #838c8d;
+
+$footer-span-mag: #999999;
+$footer-divider-index: #4e5054;
+$footer-placeholder: #878787;
+$footer-input-focus: #595c60;
+// Buttons
+$load-more-btn-text: #abbcbd;
+
+$sign-btn-stroke: #dddddd;
+$shares-btn-stroke: #8f9091;
+
+$share-bg: #225b99;
+$tweet-bg: #00adf2;
+
+$btn-nature-stroke: #5eb58b;
+$btn-nature-hover: #21a464;
+$btn-nature-shadow: #29925f;
+
+$btn-stroke-explorers: #d4b17e;
+$btn-explorers-hover: #d7993e;
+$btn-explorers-shadow: #d19741;
+
+$btn-advices-stroke: #edb0fc;
+$btn-advices-hover: #e37bfc;
+$btn-advices-shadow: #e67eff;
+
+$btn-science-stroke: #0093d5;
+$btn-science-hover: #007db4;
+$btn-science-shadow: #006795;
+
+$btn-travel-stroke: #8371d2;
+$btn-travel-hover: #6147d5;
+$btn-travel-shadow: #543fb3;
+
+$mpopular-btn-stroke: #ededed;
+$mpopular-btn-text: #3c3d41;
+
+$submit-btn-footer: #8cd494;
+$submit-btn-footer-hover: #7bba82;
+// End Buttons
+
+$base-white: #fff;
+$text-black: #3b3d40;
+$base-paragraph: #666d70;
+
+$comments-bg: #f7f7f7;
+$comments-header-text: #3a3d3f;
+$comments-count: #1f79ed;
+$comments-divider: #e7e7e7;
+$pencile-circle: #b9c7c8;
+$add-comment: #eeeeee;
+
+$most-popular-bg: #27282a;
+$most-popular-bai: #656667;
+$most-popular-mag: #666d6f;
+$footer-divider: #3d3e40;
+
+// Tags
+
+$most-popular-nature: #3aa773;
+$most-popular-nature-p: #add6c0;
+
+$explorer-tag: #d8a252;
+$explorer-p: #715938;
+
+$advices-tag: #e98fff;
+$advices-p: #f7dcfe;
+
+$science-tag: #0080b9;
+$science-p: #7cd7ff;
+
+$travel-tag: #674ed6;
+$travel-p: #a48fff;
+
+// End tags
+
+$subscribe-bg: #333437;
+$subscribe-input: #5c5d5f;
+$subscribe-input-text: #828283;
+
+$instagramm-icon: #DC2743;
+$facebook-icon: #3b5998;
+$facebook-icon-dark:#2e457d;
+$twitter-icon: #00aced;
+$twitter-icon-dark: #0084b4;
+$rss-icon: #ee802f;
+$rss-icon-dark: #de6100;
+// End colors
+
+//Carousel
+$carousel-par: #CDDFE0;
+$carousel-nav-cat-active: #c6cacb;
+$carousel-nav-head-active: #c3c3c4;
+
+//Register form
+$register-form-bg: #f5f5f5;
+$register-form-header: #641c34;
+$register-form-bright: #963050;
+$register-form-header-muted: #641c34e6;
+$register-form-header-disabled: #371119;
+$register-form-header-dark: #4b1625;
+$register-muted-text: #72767d;
+
+$dark-gun-metal:#1D1A31;
+$space-cadet:#2E294F;

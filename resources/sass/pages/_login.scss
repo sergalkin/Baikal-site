@@ -1,0 +1,179 @@
+body {
+    font-size: 0;
+}
+
+input {
+    outline: none;
+}
+
+.header-logo-pos {
+    margin: auto;
+}
+
+.login-grid-main {
+    figure {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+
+        .header-logo {
+            position: absolute;
+            top: 50%;
+            left: 47%;
+            width: 26.5vw;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            z-index: 2;
+
+            .header-logo__magazine {
+                color: #b70000;
+                background: $header-bg;
+            }
+        }
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            filter: grayscale(30%) contrast(80%);
+        }
+    }
+
+    &-sign-in {
+        font-size: 1vw;
+        background-color: $sign-btn-stroke;;
+
+        .sign-in-block {
+            position: fixed;
+            width: 50vw;
+
+            .sign-in-form {
+                margin: 12vw auto 1.5vw auto;
+                box-shadow: 0px 0px 5px #00000080;
+                width: 28vw;
+                height: 53vh;
+                border-radius: .25vw;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background: #f5f5f5;
+                h2 {
+                    text-align: center;
+                    font-family: $alt-font-family;
+                    font-size: 1.5vmax;
+                    line-height: 1.6;
+                    color: $dark-gun-metal;
+                    letter-spacing: -0.02em;
+                    padding-bottom: 1vh;
+                }
+                .form__label {
+                    width: 79%;
+                    margin: .8vw auto 2vh auto;
+                    color: #2d2d2de6;
+                    display: block;
+                    font-size: $small-font-size;
+                    font-family: "PT Serif", serif;
+                }
+
+                #login, #password {
+                    width: 71.4%;
+                    margin: 0 auto;
+
+                    font-family: "Montserrat", sans-serif;
+                    border: 1px solid #f8f8f8;
+                    border-top-color: rgb(248, 248, 248);
+                    border-right-color: rgb(248, 248, 248);
+                    border-bottom-color: rgb(248, 248, 248);
+                    border-left-color: rgb(248, 248, 248);
+                    border-radius: 5px;
+                    color: #070708;
+                    background-color: rgba(0, 0, 0, 0.1);
+                    border-color: rgba(0, 0, 0, 0.3);
+                    padding: 1vh;
+                    font-size: 0.83vw;
+                    box-shadow: none;
+
+
+                    &:focus {
+                        transition: all 200ms linear;
+                        border: 1px solid #222325;;
+                    }
+
+                    &:invalid {
+                        transition: all 200ms linear;
+                        box-shadow: none;
+                    }
+
+                    &::placeholder {
+                        font-size: 1vw;
+                        font-family: "PT Serif Italic", serif;
+                        color: #666d70;
+                        opacity: 1;
+                        transition: all 200ms linear;
+
+                    }
+                }
+            }
+
+            div {
+                &:nth-of-type(2) {
+                    margin-top: .4vw;
+                }
+            }
+        }
+    }
+}
+
+.check-box-container {
+    @include flex();
+    align-items: center;
+    margin: 1.8vw auto 0;
+    width: 78%;
+
+    input {
+        margin: 0 .4vw 0 0;
+    }
+
+    label {
+        font-family: $base-font-family;
+        color: #2d2d2de6;
+        cursor: pointer;
+        font-size: $small-font-size;
+    }
+
+
+}
+
+.sign-in__btn {
+    margin: 3vh auto 1.5vh auto;
+    border-radius: 0.3vw;
+    width: 22.2vw;
+}
+
+.recovery {
+    color: #72767d;
+    margin: 0.8vw auto 0 auto;
+    width: 78%;
+    font-family: $base-font-family;
+    font-size: $tiny-font-size;
+
+    &__link {
+        text-decoration: none;
+        color: $space-cadet;
+        &:hover {
+            color: $dark-gun-metal;
+        }
+    }
+}
+
+.login-bg {
+    background-image: url("/img/matheus-bandoch-113225-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    display: block;
+    height: 100vh;
+}

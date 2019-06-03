@@ -1,0 +1,124 @@
+// Сетка для страницы статьи
+.header {
+    display: grid;
+    grid-template-rows: auto auto;
+    .top-header, .bottom-header {
+        display: grid;
+        grid-template-columns: 20.83vw 40vw 20.83vw;
+    }
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: 19.17vw 60.75vw;
+    gap: 1.66vw;
+}
+
+.footer {
+    display: grid;
+    grid-template-rows: auto;
+    .wrapper {
+        display: grid;
+        grid-template-columns: 20.83vw 40vw 20.83vw;
+    }
+}
+
+.wrapper {
+    width: 81.66vw;
+    margin: 0 auto;
+    position: relative;
+}
+
+// Конец статьи
+
+// Сетка регистрации
+.register-grid {
+    display: grid;
+    // 0fr нужно для того, чтобы во время анимации элемент не вылезал откуда-то снизу
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+}
+
+// Конец сетки регистрации
+
+// Сетка страницы логина
+
+.login-grid-main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+// Конец сетки страницы логина
+
+// Сетка index страницы
+.index-header-grid {
+    display: grid;
+    grid-template-columns: .2fr .8fr;
+    height: 8.4vw;
+    .header-grid-logo {
+        align-self: center;
+    }
+    .header-grid-right {
+        display: grid;
+        border-left: 1px solid $sign-btn-stroke;
+        grid-template-rows: 1fr 1fr;
+        height: 8.4vw;
+        &-top {
+            display: grid;
+            border-bottom: 1px solid $sign-btn-stroke;
+            grid-template-columns: .7fr .3fr;
+            height: 4.2vw;
+            .grid-right-top-search {
+                height: 100%;
+                position: relative;
+                justify-content: flex-end;
+                @include flex();
+                align-self: center;
+                align-items: center;
+            }
+            .grid-right-top-nav {
+                height: 100%;
+                @include flex();
+                align-self: center;
+                align-items: center;
+                justify-content: space-evenly;
+                border-right: 1px solid $sign-btn-stroke;
+            }
+        }
+        &-bottom {
+            display: grid;
+            grid-template-columns: .6fr 0.4fr;
+            height: 4.2vw;
+            .grid-right-bottom-socials {
+                height: 4.11vw;
+                @include flex();
+                align-self: center;
+                align-items: center;
+                justify-content: flex-end;
+                border-left: 1px solid $sign-btn-stroke;
+            }
+            .grid-right-bottom-advert {
+                align-self: center;
+                justify-self: center;
+            }
+        }
+    }
+}
+.index-footer-grid {
+    display: grid;
+    grid-template-columns: 15.5vw 27.75vw 15.83vw 1fr;
+    height: 100%;
+    padding-top: 3.58vw;
+    padding-bottom: 3.58vw;
+    &-logo {
+        width: 15.5vw;
+    }
+    &-nav {
+        justify-content: center;
+    }
+    &-socials {
+        //justify-content: center;
+    }
+}
+// Конец сетки index страницы

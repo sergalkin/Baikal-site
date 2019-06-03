@@ -1,0 +1,33 @@
+.error-help__text {
+    display: block;
+    position: relative;
+    color: $heart-color;
+    font-size: $tiny-font-size;
+    font-family: $alt-font-family-italic;
+
+    top: 0.4vw;
+    text-align: right;
+    left: 0;
+}
+.error-help__pass {
+    top: -0.4vw;
+}
+
+
+.register-bg {
+    background-image: url("/img/keith-wong-761290-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    display: block;
+    height: 100vh;
+}
+
+.password-eye {
+    position: relative;
+    top: -2.8vh;
+    left: 21vw;
+    cursor: pointer;
+    color: $dark-gun-metal;
+}
