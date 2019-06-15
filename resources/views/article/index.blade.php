@@ -1,0 +1,8 @@
+@extends('layouts.app')
+@section('content')
+    @include('article.header')
+    @include('article.aside')
+    @include('article.content')
+    @include('article.footer')
+    @include('article.subscribe')
+@endsection()

@@ -25,10 +25,7 @@
 <body>
 <div id="app">
     {{--        <loader-component></loader-component>--}}
-    <div>
-        @yield('content')
-    </div>
+    @yield('content')
 </div>
 </body>
-
 </html>

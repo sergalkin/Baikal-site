@@ -311,7 +311,7 @@ section {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   line-height: 1;
 }
 
