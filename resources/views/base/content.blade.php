@@ -267,26 +267,28 @@
                 </section>
             </div>
             <!--Фронтальная Карточка популярной статьи-->
-            <div class="most-popular-card_small_isfront bg-explorers">
-                <!--Лицевая часть карточки-->
-                <section class="most-popular-card-front">
-                    <figure class="front-header">
-                        <div class="card-tag card-tag-front card-front__tag_theme_isexplorers">explorers</div>
-                        <img src="img/most-p1.png" alt="" class="front-header__img">
-                    </figure>
-                    <div class="most-popular-card-body">
-                        <h5 class="card-body__header">Style Essay: The Rise And Fall Of The Dress Code</h5>
-                        <p class="card-body__text">Wear on a night out has never been more complicated</p>
-                    </div>
-                </section>
-                <!--Задняя часть карточки-->
-                <section class="most-popular-card-back" style="display: none">
-                    <div class="card-tag card-tag-back ">explorers</div>
-                    <h3 class="card-back__header">14 Things Men Should Never Wear After 30</h3>
-                    <p>Light a bonfire in the garden, and step bravely into your best-dressed decade</p>
-                    <a href="#" class="card-back__btn_theme_isexplorers">READ MORE</a>
-                </section>
-            </div>
+            @foreach($articles as $article)
+                <div class="most-popular-card_small_isfront bg-explorers">
+                    <!--Лицевая часть карточки-->
+                    <section class="most-popular-card-front">
+                        <figure class="front-header">
+                            <div class="card-tag card-tag-front card-front__tag_theme_isexplorers">explorers</div>
+                            <img src="img/most-p1.png" alt="" class="front-header__img">
+                        </figure>
+                        <div class="most-popular-card-body">
+                            <h5 class="card-body__header"><?=$article->name;?></h5>
+                            <p class="card-body__text">Wear on a night out has never been more complicated</p>
+                        </div>
+                    </section>
+                    <!--Задняя часть карточки-->
+                    <section class="most-popular-card-back" style="display: none">
+                        <div class="card-tag card-tag-back ">explorers</div>
+                        <h3 class="card-back__header">14 Things Men Should Never Wear After 30</h3>
+                        <p>Light a bonfire in the garden, and step bravely into your best-dressed decade</p>
+                        <a href="<?=$article->path();?>" class="card-back__btn_theme_isexplorers">READ MORE</a>
+                    </section>
+                </div>
+            @endforeach
         </div>
         <!--Превью статьи-->
         <a href="#" class="index-carousel preview">

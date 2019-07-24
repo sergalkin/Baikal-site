@@ -13,9 +13,11 @@
 
 Route::get('/','HomeController@index');
 
-Route::get('/article', function () {
+Route::get('/article1', function () {
     return view('article.index');
 });
+Route::get('/articles', 'ArticleController@index');
+Route::get('/article/{slug}', 'ArticleController@show');
 
 Auth::routes();
 Route::post('/register/email', 'Auth\RegisterController@checkEmail');

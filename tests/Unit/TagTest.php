@@ -19,11 +19,4 @@ class TagTest extends TestCase
         $this->assertInstanceOf('Illuminate\Database\Eloquent\Collection', $tags->articles);
     }
 
-    /** @test */
-    public function a_tag_has_creator()
-    {
-        $tags = create('App\Tag');
-
-        $this->assertInstanceOf('App\User', $tags->creator);
-    }
 }
