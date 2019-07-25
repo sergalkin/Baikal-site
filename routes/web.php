@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/','HomeController@index');
+Route::get('/','ArticleController@index');
 
 Route::get('/article1', function () {
     return view('article.index');
