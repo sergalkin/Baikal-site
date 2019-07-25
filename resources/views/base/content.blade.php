@@ -265,7 +265,7 @@
                         <p class="card-body__text">Figuring out how our brains work is key to understanding </p>
                     </div>
                 </section>
-            </div>
+            </div>9
             <!--Фронтальная Карточка популярной статьи-->
             @foreach($articles as $article)
                 <div class="most-popular-card_small_isfront bg-explorers">
