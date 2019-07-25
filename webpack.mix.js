@@ -15,4 +15,5 @@ mix.js('resources/js/app.js', 'public/js')
     .copyDirectory('resources/fonts', 'public/fonts')
     .copyDirectory('resources/img', 'public/img')
     .copy('node_modules/animate.css/animate.min.css', 'public/css/')
+    .copy('resources/js/temp.js', 'public/js/')
     .sass('resources/sass/app.scss', 'public/css');
